@@ -13,6 +13,9 @@ public class PresentController : MonoBehaviour
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
         boxCollider2D.enabled = false;
+        float width = Random.Range(100, 300);
+        float height = Random.Range(400, 700);
+        GetComponent<Rigidbody2D>().AddForce(new Vector3(width, height, 0));
     }
 
     // Update is called once per frame
