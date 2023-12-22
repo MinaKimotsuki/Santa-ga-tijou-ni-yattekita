@@ -44,6 +44,7 @@ public class PresentController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!collision.CompareTag("House")) return;
         GetComponent<SpriteRenderer>().sortingOrder = 0;
         GameManager.Point++;
         collision.GetComponentInChildren<ParticleSystem>().Play();
