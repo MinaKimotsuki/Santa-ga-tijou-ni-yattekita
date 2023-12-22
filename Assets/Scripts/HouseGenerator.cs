@@ -9,7 +9,7 @@ public class HouseGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 30; i++)
         {
             int r = Random.Range(0, houses.Length);
             Instantiate(houses[r], new Vector3((6 * i) - 6, 0, 0), Quaternion.identity);

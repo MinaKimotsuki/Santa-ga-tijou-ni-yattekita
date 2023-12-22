@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     float time;
+    public static int Point { get; set; }
     [SerializeField] GameObject finishPanel;
     [SerializeField] Text timeText;
+    [SerializeField] Text pointText;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class GameManager : MonoBehaviour
             finishPanel.SetActive(true);
             Time.timeScale = 0;
         }
+        pointText.text = Point.ToString();
     }
 
     public void OnFinishButton()
