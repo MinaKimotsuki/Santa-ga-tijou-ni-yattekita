@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Point = 0;
         finishPanel.SetActive(false);
     }
 
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
     {
         time += Time.deltaTime;
         timeText.text = (60 - time).ToString("f0");
-        if (time >= 60f)
+        if (time >= 60)
         {
             finishPanel.SetActive(true);
             Time.timeScale = 0;
